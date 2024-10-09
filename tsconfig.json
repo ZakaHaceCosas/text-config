@@ -1,0 +1,41 @@
+// custom (very strict) TSCOnfig
+{
+    // "extends": "expo/tsconfig.base", expo only
+    "compilerOptions": {
+        "strict": true,
+        "paths": {
+            "@/*": ["./*"]
+        },
+        // web only, for react native dont use these at all
+        // "module": "ESNext", or ES6 for compat
+        // "target": "ESNext", or ES6
+        // "outDir": "./js", or anything
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "incremental": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "strictFunctionTypes": true,
+        "alwaysStrict": true,
+        "strictPropertyInitialization": true,
+        "noStrictGenericChecks": false,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "exactOptionalPropertyTypes": true,
+        "strictBindCallApply": true,
+        "useUnknownInCatchVariables": true
+    },
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": [
+      "**/*.wip.ts",
+      "**/*.deprecated.ts",
+      "**/*.wip.tsx",
+      "**/*.deprecated.tsx",
+      "**/*.js" // this is best for standard web (e.g. my github pages bio)
+    ]
+}
